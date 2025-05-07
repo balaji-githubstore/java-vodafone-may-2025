@@ -27,7 +27,7 @@ public class Demo1Datatypes {
 		
 		System.out.println(myName.toUpperCase());
 		System.out.println(myName.toLowerCase());
-		System.out.println(myName.equals("Bala"));
+		System.out.println(myName.equals("Bala99"));
 		System.out.println(myName.equalsIgnoreCase("Bala"));
 		System.out.println(myName.contains("ba"));
 		
