@@ -6,6 +6,7 @@ public class Demo1List {
 	
 	public static void main(String[] args) {
 		
+		//Generic type
 		ArrayList<String> colors=new ArrayList<String>();
 		
 		colors.add("red");
