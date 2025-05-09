@@ -7,7 +7,12 @@ interface WebDriverDemo1
 	public abstract void quit();
 }
 
-class ChromeDriverDemo implements WebDriverDemo1
+interface javascriptexecutordemo
+{
+	void executescript();
+}
+
+class ChromeDriverDemo implements WebDriverDemo1,javascriptexecutordemo
 {
 	public ChromeDriverDemo()
 	{
@@ -26,9 +31,14 @@ class ChromeDriverDemo implements WebDriverDemo1
 	{
 		
 	}
+	
+	public void executescript() {
+		// TODO Auto-generated method stub
+		System.out.println("chrome executescript");
+	}
 }
 
-class EdgeDriverDemo implements WebDriverDemo1
+class EdgeDriverDemo implements WebDriverDemo1,javascriptexecutordemo
 {
 	public EdgeDriverDemo()
 	{
@@ -41,6 +51,14 @@ class EdgeDriverDemo implements WebDriverDemo1
 	public void quit() {
 		System.out.println("close edge browser");
 	}
+	public void testEdge()
+	{
+		
+	}
+	public void executescript() {
+		// TODO Auto-generated method stub
+		System.out.println("edge executescript");
+	}
 }
 
 
@@ -48,8 +66,8 @@ public class Demo2Interface {
 
 	public static void main(String[] args) {
 		
-		String browser="edge";
-		
+//		String browser="ch";
+//		
 //		WebDriverDemo1 driver;
 //		
 //		if(browser.equalsIgnoreCase("edge"))
@@ -68,7 +86,10 @@ public class Demo2Interface {
 		driver.quit();
 		
 		
-		
+		javascriptexecutordemo d= (javascriptexecutordemo) driver;
+		d.executescript();
+		//driver.exe
+
 
 	}
 
